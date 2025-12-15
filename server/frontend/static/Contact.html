@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+  <div class="container-fluid">
+    <h2 class="me-4">Dealerships</h2>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE CONTENT -->
+<div class="container mt-5">
+
+  <!-- ROW 1: IMAGE ON TOP -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <img src="/static/contactus.png" class="img-fluid rounded" alt="Contact Best Cars">
+    </div>
+  </div>
+
+  <!-- ROW 2: TEXT + ICON -->
+  <div class="row align-items-center g-4">
+
+    <!-- TEXT -->
+    <div class="col-md-8">
+      <h1>Contact Us</h1>
+      <p class="mb-3">
+        Have questions about a vehicle, financing, or availability? Reach out and our team will respond quickly.
+      </p>
+
+      <div class="mb-3">
+        <div><strong>Phone:</strong> (555) 123-4567</div>
+        <div><strong>Email:</strong> support@bestcarsdealer.com</div>
+        <div><strong>Address:</strong> 123 Main St, Charleston, SC</div>
+        <div><strong>Hours:</strong> Mon–Sat 9am–6pm • Sun Closed</div>
+      </div>
+
+      <!-- OPTIONAL: SIMPLE CONTACT FORM -->
+      <form action="/contact" method="POST" class="border rounded p-3">
+        <!-- If using Django, include: {% csrf_token %} -->
+        <div class="mb-2">
+          <label class="form-label">Name</label>
+          <input class="form-control" type="text" name="name" required>
+        </div>
+
+        <div class="mb-2">
+          <label class="form-label">Email</label>
+          <input class="form-control" type="email" name="email" required>
+        </div>
+
+        <div class="mb-2">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" name="message" rows="4" required></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- ICON / IMAGE -->
+    <div class="col-md-4 text-center">
+      <img src="/static/contact.png" alt="Contact Icon" width="140">
+      <!-- If you don’t have contact.png, you can reuse person.png -->
+      <!-- <img src="/static/person.png" alt="Contact Icon" width="140"> -->
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
